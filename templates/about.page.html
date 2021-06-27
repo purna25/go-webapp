@@ -10,6 +10,14 @@
                 <p>This came from the template:
                 {{index .StringMap "text"}}
                 </p>
+
+                <p>
+                    {{if ne (index .StringMap "remote_ip") ""}}
+                        Your remote IP address is {{index .StringMap "remote_ip"}} 
+                    {{else}}
+                        I don't your IP address yet. visit the <a href="/">Home Page</a> so I can get it.
+                    {{end}}
+                </p>
             </div>
         </div>
     </div>
